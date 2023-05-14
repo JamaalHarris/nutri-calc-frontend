@@ -7,6 +7,7 @@ import { EdamamSearch } from "./EdamamSearch";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Modal } from "./Modal";
+import "./index.css";
 
 export function Content() {
   const [favorites, setFavorites] = useState([]);
@@ -67,8 +68,8 @@ export function Content() {
 
   useEffect(handleIndexFavorites, []);
   return (
-    <div>
-      <h1>Nutri-Calc: The Nutritional Calculator</h1>
+    <div className="content-body">
+      <h1 className="container text-center">Nutri-Calc: The Nutritional Calculator</h1>
       <Signup />
       <Login />
       <EdamamSearch />

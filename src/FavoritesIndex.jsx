@@ -1,6 +1,6 @@
 export function FavoritesIndex(props) {
   return (
-    <div>
+    <div className="container text-center">
       <h1>Favorites</h1>
       {props.favorites.map((favorite) => (
         <div key={favorite.id}>

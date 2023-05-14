@@ -29,7 +29,7 @@ export function Login() {
   };
 
   return (
-    <div id="login">
+    <div className="container text-center" id="login">
       <h1>Login</h1>
       <ul>
         {errors.map((error) => (
@@ -43,7 +43,8 @@ export function Login() {
         <div>
           Password: <input name="password" type="password" />
         </div>
-        <button className="btn btn-primary" type="submit">
+
+        <button className="btn btn-outline-secondary btn-lg" type="submit">
           Login
         </button>
       </form>

@@ -6,8 +6,8 @@ export function FavoritesNew(props) {
     props.onCreateFavorite(params);
   };
   return (
-    <div>
-      <p>Add Favorites to save for later!</p>
+    <div className="container text-center">
+      <h1> Add Favorites to save for later! </h1>
       <form onSubmit={handleSubmit}>
         <div>
           Favorited Item: <input name="favorited_item" type="text" />
@@ -15,7 +15,7 @@ export function FavoritesNew(props) {
         <div>
           Quantity: <input name="quantity" type="text" />
         </div>
-        <button className="btn btn-primary" type="submit">
+        <button className="btn btn-outline-secondary btn-lg" type="submit">
           Create Favorite
         </button>
       </form>
