@@ -5,3 +5,24 @@ html {
 .content-body {
   background-color: rgb(64, 165, 13);
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+div .card {
+  background: rgb(244, 220, 4);
+  width: 300px;
+  height:318px;
+  margin-top: 20px;
+}
+
+div .card-detail {
+  background: rgb(64, 165, 13);
+  text-align: center;
+  /* padding: 1em; */
+}

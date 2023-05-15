@@ -10,10 +10,10 @@ export function FavoritesNew(props) {
       <h1> Add Favorites to save for later! </h1>
       <form onSubmit={handleSubmit}>
         <div>
-          Favorited Item: <input name="favorited_item" type="text" />
+          <input placeholder="Favorited Item" name="favorited_item" type="text" />
         </div>
         <div>
-          Quantity: <input name="quantity" type="text" />
+          <input placeholder="Quantity" name="quantity" type="text" />
         </div>
         <button className="btn btn-outline-secondary btn-lg" type="submit">
           Create Favorite

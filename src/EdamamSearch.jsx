@@ -18,13 +18,13 @@ export function EdamamSearch() {
       <h1>Search</h1>
       <form onSubmit={handleSubmit}>
         <div>
-          Quantity: <input name="quantity" type="number" />
+          <input placeholder="Quantity" name="quantity" type="number" />
         </div>
         <div>
-          Measurement: <input name="measurement" type="text" />
+          <input placeholder="Measurement" name="measurement" type="text" />
         </div>
         <div>
-          Item: <input name="item" type="text" />
+          <input placeholder="Item" name="item" type="text" />
         </div>
 
         <button className="btn btn-outline-secondary btn-lg" type="submit">
@@ -32,18 +32,33 @@ export function EdamamSearch() {
         </button>
       </form>
       <div className="card">
-        <h3>Nutritional Info (percentage of daily value)</h3>
-        <div>
+        <h3>Nutritional Info (grams and daily percentage)</h3>
+        <div className="card-detail">
           <p>Calories: {nutritionalInfo.calories}</p>
           {/* the question marks force the program to check to see if what comes next exists. its called the optional chaining operator */}
-          <p>Total Daily Fat: {nutritionalInfo?.totalDaily?.FAT?.quantity}</p>
-          <p>Cholesterol: {nutritionalInfo?.totalDaily?.CHOLE?.quantity}</p>
-          <p>Sodium: {nutritionalInfo?.totalDaily?.NA?.quantity}</p>
-          <p>Carbohydrates: {nutritionalInfo?.totalDaily?.CHOCDF?.quantity}</p>
-          <p>Fiber: {nutritionalInfo?.totaltotalDaily?.FIBTG?.quantity}</p>
           <p>
-            Protein: {Math.round(nutritionalInfo?.totalNutrients?.PROCNT?.quantity)}grams,
-            {nutritionalInfo?.totalDaily?.PROCNT?.quantity}
+            Total Daily Fat: {Math.round(nutritionalInfo?.totalNutrients?.FAT?.quantity)} grams,{" "}
+            {Math.round(nutritionalInfo?.totalDaily?.FAT?.quantity)}%
+          </p>
+
+          <p>
+            Cholesterol: {Math.round(nutritionalInfo?.totalNutrients?.CHOLE?.quantity)} grams,{" "}
+            {Math.round(nutritionalInfo?.totalDaily?.CHOLE?.quantity)}%
+          </p>
+
+          <p>
+            Sodium: {Math.round(nutritionalInfo?.totalNutrients?.NA?.quantity)} grams,{" "}
+            {Math.round(nutritionalInfo?.totalDaily?.NA?.quantity)}%
+          </p>
+
+          <p>
+            Carbohydrates: {Math.round(nutritionalInfo?.totalNutrients?.CHOCDF?.quantity)} grams,{" "}
+            {Math.round(nutritionalInfo?.totalDaily?.CHOCDF?.quantity)}%
+          </p>
+
+          <p>
+            Protein: {Math.round(nutritionalInfo?.totalNutrients?.PROCNT?.quantity)} grams,{" "}
+            {Math.round(nutritionalInfo?.totalDaily?.PROCNT?.quantity)}%
           </p>
         </div>
       </div>
