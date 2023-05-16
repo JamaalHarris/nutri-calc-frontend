@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer>
+    <footer className="footer">
       <p>Copyright MMXXIII.</p>
     </footer>
   );

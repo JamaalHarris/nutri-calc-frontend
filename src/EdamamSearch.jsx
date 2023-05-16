@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-
+import { EdamamResults } from "./EdamamResults";
 export function EdamamSearch() {
   const [nutritionalInfo, setNutritionalInfo] = useState({});
   const handleSubmit = (event) => {
@@ -31,12 +31,14 @@ export function EdamamSearch() {
           Search Foods
         </button>
       </form>
-      <div className="card">
-        <h3>Nutritional Info (grams and daily percentage)</h3>
+      <EdamamResults nutritionalInfo={nutritionalInfo}></EdamamResults>
+      {/* <div className="card">
+        <h3>Nutritional Info</h3>
+        <p>grams and daily percentage</p>
         <div className="card-detail">
-          <p>Calories: {nutritionalInfo.calories}</p>
-          {/* the question marks force the program to check to see if what comes next exists. its called the optional chaining operator */}
-          <p>
+          <p>Calories: {nutritionalInfo.calories}</p> */}
+      {/* the question marks force the program to check to see if what comes next exists. its called the optional chaining operator */}
+      {/* <p>
             Total Daily Fat: {Math.round(nutritionalInfo?.totalNutrients?.FAT?.quantity)} grams,{" "}
             {Math.round(nutritionalInfo?.totalDaily?.FAT?.quantity)}%
           </p>
@@ -53,15 +55,16 @@ export function EdamamSearch() {
 
           <p>
             Carbohydrates: {Math.round(nutritionalInfo?.totalNutrients?.CHOCDF?.quantity)} grams,{" "}
-            {Math.round(nutritionalInfo?.totalDaily?.CHOCDF?.quantity)}%
+            {Math.round(nutritionalInfo?.totalDaily?.CHOCDF?.quantity)}%{" "}
           </p>
+          <p>Total Sugar: {Math.round(nutritionalInfo?.totalNutrients?.SUGAR?.quantity)} grams</p>
 
           <p>
             Protein: {Math.round(nutritionalInfo?.totalNutrients?.PROCNT?.quantity)} grams,{" "}
             {Math.round(nutritionalInfo?.totalDaily?.PROCNT?.quantity)}%
           </p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

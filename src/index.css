@@ -3,7 +3,10 @@ html {
 }
 
 .content-body {
+  background-image: url("https://images.unsplash.com/photo-1617957772097-93dc166cd335?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80");
+  background-size: cover;
   background-color: rgb(64, 165, 13);
+  padding: 4em;
 }
 
 .container {
@@ -15,14 +18,34 @@ html {
 
 
 div .card {
-  background: rgb(244, 220, 4);
+  background: rgb(246, 237, 154);
   width: 300px;
-  height:318px;
-  margin-top: 20px;
+  height:400px;
+  margin: 2em ;
+box-shadow: 1px 2px 15px black;
 }
 
 div .card-detail {
-  background: rgb(64, 165, 13);
+  background: rgb(244, 246, 243);
   text-align: center;
   /* padding: 1em; */
+}
+
+/* navbar style */
+div .link-name {
+  margin-right: 10px;
+  color: rgb(246, 237, 154);
+ text-decoration: none;
+}
+
+div .link-name:hover {
+  background: rgba(97, 95, 94, 0.74);;
+}
+
+div .menu-list {
+  background-color: rgb(27, 164, 139);
+}
+.footer{
+  text-align: center;
+  background-color: rgb(246, 237, 154);;
 }

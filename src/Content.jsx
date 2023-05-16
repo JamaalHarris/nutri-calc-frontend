@@ -1,5 +1,3 @@
-import { Signup } from "./Signup";
-import { Login } from "./Login";
 import { FavoritesIndex } from "./FavoritesIndex";
 import { FavoritesNew } from "./FavoritesNew";
 import { FavoritesShow } from "./FavoritesShow";
@@ -69,9 +67,8 @@ export function Content() {
   useEffect(handleIndexFavorites, []);
   return (
     <div className="content-body">
-      <h1 className="container text-center">Nutri-Calc: The Nutritional Calculator</h1>
-      <Signup />
-      <Login />
+      <h1 className="container text-center">Nutri-Calc</h1>
+      <h2 className="container text-center">The Nutritional Calculator</h2>
       <EdamamSearch />
       <FavoritesIndex favorites={favorites} onShowFavorite={handleShowFavorite} />
       <FavoritesNew onCreateFavorite={handleCreateFavorite} />
