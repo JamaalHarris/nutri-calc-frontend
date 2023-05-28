@@ -1,28 +1,156 @@
 html {
   scroll-behavior: smooth;
 }
-
-.content-body {
-  background-color: rgb(64, 165, 13);
+body {
+  background-image: url(https://images.squarespace-cdn.com/content/v1/54d3b744e4b07b2898a56f8d/1460687434977-O9AD1NREF40VF0VPG5KT/Interlude-Fitness-Nutrition-Coaching.jpg?format=2500w);
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-
-div .card {
-  background: rgb(244, 220, 4);
-  width: 300px;
-  height:318px;
+h1.container {
+  font-size: 32px;
   margin-top: 20px;
+  margin-bottom: 40px;
+  color: #333;
+  text-align: center;
+  text-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px white, 0 0 4px silver, 0 0 5px silver, 0 0 6px silver, 0 0 7px silver, 0 0 8px black, 0 0 9px black;
+  
+  /* Typing Effect */
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 9s steps(100, end) forwards, blink-caret 1s step-end infinite;
 }
 
-div .card-detail {
-  background: rgb(64, 165, 13);
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-right-color: transparent;
+  }
+  50% {
+    border-right-color: #333;
+  }
+}
+
+
+nav {
+  background-color: #333;
+  padding: 10px;
   text-align: center;
-  /* padding: 1em; */
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: orange;
+}
+
+
+.nutrition-label {
+  max-width: 400px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 0 auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nutrition-label h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.nutrition-label p {
+  margin: 0;
+  color: #333;
+  line-height: 1.4;
+}
+
+.nutrition-label p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.nutrition-label p span {
+  font-weight: bold;
+}
+
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slideIn {
+  animation: slideIn 0.5s ease;
+}
+
+button.btn {
+  margin: 20px;
+  animation: fade 4s;
+  background-color: white;
+  box-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px white, 0 0 4px black, 0 0 5px black, 0 0 6px black, 0 0 7px black, 0 0 8px black, 0 0 9px black;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade {
+  animation: fade 1s ease;
+}
+
+
+input {
+  border-radius: 6px;
+  padding-bottom: 6px;
+  box-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px white, 0 0 4px black, 0 0 5px black, 0 0 6px black, 0 0 7px black, 0 0 8px black, 0 0 9px black;
+}
+
+.container input {
+  margin-bottom: 10px;
+}
+
+h2, h3 {
+  background-image: url(https://images.unsplash.com/photo-1597113366853-fea190b6cd82?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d29vZCUyMGdyYWlufGVufDB8fDB8fHww&w=1000&q=80);
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 10px;
+  text-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px white, 0 0 4px black, 0 0 5px black, 0 0 6px black, 0 0 7px black, 0 0 8px black, 0 0 9px black;
+  box-shadow: 0 0 1px darkgrey, 0 0 2px darkgrey, 0 0 3px darkgrey, 0 0 4px black, 0 0 5px black, 0 0 6px black, 0 0 7px black, 0 0 8px black, 0 0 9px black;
 }

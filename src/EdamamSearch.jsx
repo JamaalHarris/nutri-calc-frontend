@@ -15,7 +15,7 @@ export function EdamamSearch() {
   };
   return (
     <div className="container text-center">
-      <h1>Search</h1>
+      <h2>Search</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <input placeholder="Quantity" name="quantity" type="number" />
@@ -31,7 +31,7 @@ export function EdamamSearch() {
           Search Foods
         </button>
       </form>
-      <div className="card">
+      <div className="card nutrition-label">
         <h3>Nutritional Info (grams and daily percentage)</h3>
         <div className="card-detail">
           <p>Calories: {nutritionalInfo.calories}</p>

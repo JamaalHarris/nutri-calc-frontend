@@ -70,18 +70,20 @@ export function Content() {
   return (
     <div className="content-body">
       <h1 className="container text-center">Nutri-Calc: The Nutritional Calculator</h1>
-      <Signup />
-      <Login />
-      <EdamamSearch />
-      <FavoritesIndex favorites={favorites} onShowFavorite={handleShowFavorite} />
-      <FavoritesNew onCreateFavorite={handleCreateFavorite} />
-      <Modal show={isFavoritesShowVisible} onClose={handleClose}>
-        <FavoritesShow
-          favorite={currentFavorite}
-          onUpdateFavorite={handleUpdateFavorite}
-          onDestroyFavorite={handleDestroyFavorite}
-        />
-      </Modal>
+      <div className="container">
+        <Signup />
+        <Login />
+        <EdamamSearch />
+        <FavoritesIndex favorites={favorites} onShowFavorite={handleShowFavorite} />
+        <FavoritesNew onCreateFavorite={handleCreateFavorite} />
+        <Modal show={isFavoritesShowVisible} onClose={handleClose}>
+          <FavoritesShow
+            favorite={currentFavorite}
+            onUpdateFavorite={handleUpdateFavorite}
+            onDestroyFavorite={handleDestroyFavorite}
+          />
+        </Modal>
+      </div>
     </div>
   );
 }
