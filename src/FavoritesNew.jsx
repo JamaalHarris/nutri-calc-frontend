@@ -7,7 +7,7 @@ export function FavoritesNew(props) {
   };
   return (
     <div className="container text-center">
-      <h1> Add Favorites to save for later! </h1>
+      <h3> Add Favorites to save for later! </h3>
       <form onSubmit={handleSubmit}>
         <div>
           <input placeholder="Favorited Item" name="favorited_item" type="text" />
